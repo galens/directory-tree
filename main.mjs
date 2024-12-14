@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import Directory from './directory.mjs';
 
-// default to commands.txt file no override input file is passed in
+// default to commands.txt file when no override input file is passed in
 let fileName = 'commands.txt';
 
 // handle if user wants to override commands input file
