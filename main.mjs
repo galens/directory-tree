@@ -68,13 +68,13 @@ async function main() {
             // there are child directories, lets fetch the directory we need
             const secondTolastChild = dirs[dirs.length - 2]; // get second to last child
             const lastChild = dirs[dirs.length - 1];
-            const child = directory.returnChild(
+            const parent = directory.returnChild(
               secondTolastChild,
               directory.children
             );
             // we found the child directory
-            if (child) {
-              child.create(lastChild);
+            if (parent) {
+              parent.create(lastChild);
             } else {
               console.log(
                 `cannot create directory with relationship: ${commands[1]} because ${secondTolastChild} was not found`
